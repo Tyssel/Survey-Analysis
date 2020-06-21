@@ -6,12 +6,9 @@ import plotly
 from plotly.subplots import make_subplots
 import plotly.graph_objects as go
 from pathlib import Path
-path = Path('C:\\Users\\tonis\\Documents\\GitHub\\SurveyAnalysis\\Survey-Analysis\\Dati-Road-to-50.csv')
+path = Path('data\\data_rt50_general.csv')
 df = pd.read_csv(path, sep = ';', dtype = 'str', index_col=0)
-#print(df.columns)
-print(df.corr())
 fig = make_subplots(rows = len(df.columns), cols=1, subplot_titles=df.columns)
-#print(df.columns)
 num = 1
 for i in df.columns:
     data = df[i].value_counts(normalize=True)
