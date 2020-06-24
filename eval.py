@@ -16,6 +16,6 @@ for i in df.columns:
     fig.add_trace(go.Bar(x=x, y=data.values, name=i), row = num, col =1)
     fig.update_xaxes(type="category",categoryorder="category ascending", row = num, col =1)
     num = num + 1
-   
+    
 fig.update_layout(height= num*800, showlegend=False)
 fig.show() 
